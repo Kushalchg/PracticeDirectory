@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEPSE API Documentation</title>
+<style>
+      :root {
+        --primary-color: #2563eb;
+        --text-color: #1f2937;
+        --bg-color: #f9fafb;
+        --border-color: #e5e7eb;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      h2 {
+        color: var(--text-color);
+        margin: 1.5rem 0 1rem;
+        font-size: 1.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+      }
+
+      li:hover {
+        background-color: #f3f4f6;
+      }
+
+      a {
+        color: var(--primary-color);
+    text-decoration: none;
+        font-weight: 500;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .endpoint-path {
+        font-family: monospace;
+        background: #f3f4f6;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+
+      .method-badge {
+        display: inline-block;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin-left: 0.5rem;
+      }
+
+      .method-post {
+        background-color: #dbeafe;
+        color: #1e40af;
+      }
+
+      .section {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: none;
+  }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NEPSE API Documentation</h1>
+    <p>
+      Welcome to the NEPSE (Nepal Stock Exchange) API documentation. This API
+      provides access to various market data, indices, and trading information.
+    </p>
+
+    <div class="section">
+      <h2>Market Data</h2>
+      <ul>
+        <li>
+          NEPSE Subindices ->
+          <a target="blank" href="https://nepalstock.onrender.com/">/</a>
+        </li>
+        <li>
+          Securities Listing ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/security?nonDelisted=true"
+            >/security?nonDelisted=true</a
+          >
+        </li>
+        <li>
+          Market Status ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/nepse-data/market-open"
+            >/nepse-data/market-open</a
+          >
+        </li>
+        <li>
+          Daily Trade Stat [price-volume]->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/securityDailyTradeStat/58"
+            >/securityDailyTradeStat/58</a
+          >
+        </li>
+        <li>
+          Corporate Diclosures ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/news/companies/disclosure"
+            >/news/companies/disclosure</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Graph Data</h2>
+      <h3>Index Graph</h3>
+      <ul>
+        <li>
+          nepse ->
+          <a onclick="newo('1')" href="javascript:void(0);">/graph/index/58</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          sensitive ->
+          <a onclick="newo('2')" href="javascript:void(0);">/graph/index/57</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          float ->
+          <a onclick="newo('3')" href="javascript:void(0);">/graph/index/62</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          sensitive_float ->
+          <a onclick="newo('4')" href="javascript:void(0);">/graph/index/63</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+    </ul>
+
+      <h3>Sub Index Graph</h3>
+    <ul>
+        <li>
+          banking ->
+          <a onclick="newo('5')" href="javascript:void(0);">/graph/index/51</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          development_bank ->
+          <a onclick="newo('6')" href="javascript:void(0);">/graph/index/55</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          finance ->
+          <a onclick="newo('7')" href="javascript:void(0);">/graph/index/60</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          hotel_tourism ->
+          <a onclick="newo('8')" href="javascript:void(0);">/graph/index/52</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          hydro ->
+          <a onclick="newo('9')" href="javascript:void(0);">/graph/index/54</a>,
+          <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          investment ->
+          <a onclick="newo('10')" href="javascript:void(0);">/graph/index/67</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          life_insurance ->
+          <a onclick="newo('11')" href="javascript:void(0);">/graph/index/65</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          manufacturing ->
+          <a onclick="newo('12')" href="javascript:void(0);">/graph/index/56</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          microfinance ->
+          <a onclick="newo('13')" href="javascript:void(0);">/graph/index/64</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          mutual_fund ->
+          <a onclick="newo('14')" href="javascript:void(0);">/graph/index/66</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          non_life_insurance ->
+          <a onclick="newo('15')" href="javascript:void(0);">/graph/index/59</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          trading ->
+          <a onclick="newo('17')" href="javascript:void(0);">/graph/index/61</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+        <li>
+          others ->
+          <a onclick="newo('16')" href="javascript:void(0);">/graph/index/53</a
+          >, <span class="method-badge method-post">POST</span>
+      </li>
+    </ul>
+    </div>
+
+    <div class="section">
+      <h2>Company Information</h2>
+      <ul>
+        <li>
+          List ->
+          <a target="blank" href="https://nepalstock.onrender.com/company/list"
+            >/company/list</a
+          >
+        </li>
+        <li>
+          Classification ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/security/classification"
+            >/security/classification</a
+          >
+        </li>
+        <li>
+          Graph Data ->
+          <a onclick="newo('18')" href="javascript:void(0);"
+            >/market/graphdata/131</a
+          >, <span class="method-badge method-post">POST</span>
+        </li>
+        <li>
+          Detail ->
+          <a target="blank" href="https://nepalstock.onrender.com/security/8045"
+            >/security/8045</a
+          >
+        </li>
+        <li>
+          price_volume_history ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/market/security/price/8045"
+            >/market/security/price/8045</a
+          >
+        </li>
+        <li>
+          Stock Trading ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/market/history/security/2790?&size=500&startDate=2021-08-23&endDate=2022-08-23"
+            >/market/history/security/2790?&size=500&startDate=2021-08-23&endDate=2022-08-23</a
+          >
+        </li>
+        <li>
+          floorsheet ->
+          <a onclick="newo('19')" href="javascript:void(0);"
+            >/security/floorsheet/8045</a
+          >, <span class="method-badge method-post">POST</span>
+        </li>
+  </ul>
+    </div>
+
+    <div class="section">
+      <h2>Market Statistics</h2>
+      <ul>
+        <li>
+          Market Summary ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/market-summary"
+            >/market-summary</a
+          >
+        </li>
+        <li>
+          Market History ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/market-summary-history"
+            >/market-summary-history</a
+          >
+        </li>
+        <li>
+          Market Capitilization by Date ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/nepse-data/marcapbydate/"
+            >/nepse-data/marcapbydate/</a
+          >
+        </li>
+        <li>
+          Supply Demand ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/nepse-data/supplydemand"
+            >/nepse-data/supplydemand</a
+          >
+        </li>
+        <li>
+          Top Gainers ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/top-ten/top-gainer?all=true"
+            >/top-ten/top-gainer?all=true</a
+          >
+        </li>
+        <li>
+          Top Losers ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/top-ten/top-loser?all=true"
+            >/top-ten/top-loser?all=true</a
+          >
+        </li>
+        <li>
+          Top Turnover ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/top-ten/turnover?all=true"
+            >/top-ten/turnover?all=true</a
+          >
+        </li>
+        <li>
+          Top Volume ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/top-ten/trade?all=true"
+            >/top-ten/trade?all=true</a
+          >
+        </li>
+        <li>
+          Top Transaction ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/top-ten/transaction?all=true"
+            >/top-ten/transaction?all=true</a
+          >
+        </li>
+        <li>
+          Nepse Index ->
+          <a target="blank" href="https://nepalstock.onrender.com/nepse-index"
+            >/nepse-index</a
+          >
+        </li>
+        <li>
+          <b>FloorSheet</b> ->
+          <a onclick="newo('20')" href="javascript:void(0);"
+            >/nepse-data/floorsheet?page=0&size=500&sort=contractId,desc</a
+          >, <span class="method-badge method-post">POST</span>
+        </li>
+        <li>
+          Indexes ->
+          <a target="blank" href="https://nepalstock.onrender.com/index"
+            >/index</a
+          >
+        </li>
+        <li>
+          Indices ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/index/history/58?"
+            >/index/history/58?</a
+          >
+        </li>
+        <li>
+          N days trading average price ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/nepse-data/trading-average?nDays=120"
+            >/nepse-data/trading-average?nDays=120</a
+          >
+        </li>
+        <li>
+          Today's Price ->
+          <a onclick="newo('21')" href="javascript:void(0);"
+            >/nepse-data/today-price</a
+          >, <span class="method-badge method-post">POST</span>
+        </li>
+        <li>
+          Sectorwise Options ->
+          <a target="blank" href="https://nepalstock.onrender.com/sectorwise"
+            >/sectorwise</a
+          >
+    </li>
+        <li>
+          Sectorwise Details ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/sectorwise?businessDate=2022-08-08"
+            >/sectorwise?businessDate=2022-08-08</a
+          >
+    </li>
+  </ul>
+    </div>
+
+    <div class="section">
+      <h2>Broker Information</h2>
+      <ul>
+        <li>
+          Broker List ->
+          <a onclick="newo('22')" href="javascript:void(0);"
+            >/member?&size=500</a
+          >, <span class="method-badge method-post">POST</span>
+          <div style="margin-top: 0.5rem">
+            <code
+              >{"memberName":"","contactPerson":"","contactNumber":"","memberCode":"","provinceId":0,"districtId":0,"municipalityId":0,"isDealer":"Y"}</code
+            >
+          </div>
+  </li>
+        <li>
+          Stock Dealers ->
+          <a onclick="newo('23')" href="javascript:void(0);"
+            >/member/dealer?&size=500</a
+          >, <span class="method-badge method-post">POST</span>
+          <div style="margin-top: 0.5rem">
+            <code
+              >{"memberName":"","contactPerson":"","contactNumber":"","memberCode":"","provinceId":0,"districtId":0,"municipalityId":0,"isDealer":"Y"}</code
+            >
+          </div>
+  </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Other Information</h2>
+      <ul>
+        <li>
+          Promoter Share ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/security/promoters"
+            >/security/promoters</a
+          >
+        </li>
+        <li>
+          Holyday Options ->
+          <a target="blank" href="https://nepalstock.onrender.com/holiday/year"
+            >/holiday/year</a
+          >
+        </li>
+        <li>
+          Holiday by Year ->
+          <a
+            target="blank"
+            href="https://nepalstock.onrender.com/holiday/list?year=2022"
+            >/holiday/list?year=2022</a
+          >
+  </li>
+      </ul>
+    </div>
+
+    <!-- Keep all the forms for POST requests -->
+    <form id="1" action="/graph/index/58" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="2" action="/graph/index/57" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="3" action="/graph/index/62" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="4" action="/graph/index/63" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="5" action="/graph/index/51" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="6" action="/graph/index/55" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="7" action="/graph/index/60" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="8" action="/graph/index/52" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="9" action="/graph/index/54" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="10" action="/graph/index/67" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="11" action="/graph/index/65" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="12" action="/graph/index/56" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="13" action="/graph/index/64" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="14" action="/graph/index/66" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="15" action="/graph/index/59" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="16" action="/graph/index/53" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="17" action="/graph/index/61" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="18" action="/market/graphdata/131" method="POST" target="_blank">
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form
+      id="19"
+      action="/security/floorsheet/8045"
+      method="POST"
+      target="_blank"
+    >
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form
+      id="20"
+      action="/nepse-data/floorsheet?page=0&size=500&sort=contractId,desc"
+      method="POST"
+      target="_blank"
+    >
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form
+      id="21"
+      action="/nepse-data/today-price"
+      method="POST"
+      target="_blank"
+    >
+      <input type="hidden" name="whatever" value="==" />
+    </form>
+    <form id="22" action="/member?&size=500" method="POST" target="_blank">
+      <input
+        type="hidden"
+        name="whatever"
+        value="eyJtZW1iZXJOYW1lIjoiIiwiY29udGFjdFBlcnNvbiI6IiIsImNvbnRhY3ROdW1iZXIiOiIiLCJtZW1iZXJDb2RlIjoiIiwicHJvdmluY2VJZCI6MCwiZGlzdHJpY3RJZCI6MCwibXVuaWNpcGFsaXR5SWQiOjAsImlzRGVhbGVyIjoiWSJ9"
+      />
+  </form>
+    <form
+      id="23"
+      action="/member/dealer?&size=500"
+      method="POST"
+      target="_blank"
+    >
+      <input
+        type="hidden"
+        name="whatever"
+        value="eyJtZW1iZXJOYW1lIjoiIiwiY29udGFjdFBlcnNvbiI6IiIsImNvbnRhY3ROdW1iZXIiOiIiLCJtZW1iZXJDb2RlIjoiIiwicHJvdmluY2VJZCI6MCwiZGlzdHJpY3RJZCI6MCwibXVuaWNpcGFsaXR5SWQiOjAsImlzRGVhbGVyIjoiWSJ9"
+      />
+  </form>
+
+    <script>
+      const BASE_URL = "https://nepalstock.onrender.com";
+
+      function newo(e) {
+        var ins = document.getElementById(e);
+        var endpoint = ins.action;
+        var fullUrl = BASE_URL + endpoint;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", fullUrl, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == XMLHttpRequest.DONE) {
+            var win = window.open();
+            win.document.body.innerHTML = xhr.responseText;
+          }
+        };
+        var pdata = ins.getElementsByTagName("input")[0].value;
+        if (pdata != "==") {
+          xhr.send(atob(pdata));
+        } else {
+          xhr.send();
+        }
+      }
+    </script>
+  </body>
+</html>

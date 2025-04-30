@@ -1,0 +1,2 @@
+ts:
+	@bun index.ts

@@ -1,0 +1,15 @@
+Concept of Class and Object:
+
+-- Private data of class is accessable to the class inherited from that
+class(inheritance purpose).
+-- Friend class can access all the data of class (private,protected and public).
+
+Constructor and Destructor:
+-- Constructor is function which is called whent he instanc of class created.
+-- Destructor is used to free the memory that is created when the constructor
+created.
+-- Destructor called automatically when the object goes out of scope.
+
+
+
+
