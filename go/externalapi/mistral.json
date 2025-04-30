@@ -1,0 +1,125 @@
+```json
+[
+    {
+        "district": "Taplejung",
+        "constituency": "1",
+        "constituency_name": "1",
+        "representative": "Tila K. Menyangwa",
+        "gender": "male",
+        "age": 57,
+        "party": "Nepali Congress (EC)",
+        "id": 12772,
+        "elected": true
+    },
+    {
+        "district": "Taplejung",
+        "constituency": "2",
+        "constituency_name": "1",
+        "representative": "Khagendra Singh Hangam",
+        "gender": "male",
+        "age": 40,
+        "party": "Nepali Congress",
+        "id": 10496,
+        "elected": true
+    },
+    {
+        "district": "Panchthar",
+        "constituency": "1",
+        "constituency_name": "1",
+        "representative": "Kamal Prasad Jabege",
+        "gender": "male",
+        "age": 64,
+        "party": "Nepali Congress (ECC)",
+        "id": 16849,
+        "elected": true
+    },
+    {
+        "district": "Panchthar",
+        "constituency": "2",
+        "constituency_name": "1",
+        "representative": "Indra Bahadur Aawal",
+        "gender": "male",
+        "age": 40,
+        "party": "Nepali Congress (Maoist Centre)",
+        "id": 15685,
+        "elected": true
+    },
+    {
+        "district": "Ilam",
+        "constituency": "1",
+        "constituency_name": "2",
+        "representative": "Govind Giri",
+        "gender": "male",
+        "age": 62,
+        "party": "Nepali Congress",
+        "id": 16658,
+        "elected": true
+    },
+    {
+        "district": "Ilam",
+        "constituency": "1",
+        "constituency_name": "1",
+        "representative": "Khinu Langwa",
+        "gender": "female",
+        "age": 52,
+        "party": "Nepali Congress (ECC)",
+        "id": 13371,
+        "elected": true
+    },
+    {
+        "district": "Ilam",
+        "constituency": "2",
+        "constituency_name": "2",
+        "representative": "Ram Bahadur Magar",
+        "gender": "male",
+        "age": 60,
+        "party": "Nepali Congress (EC)",
+        "id": 13754,
+        "elected": true
+    },
+    {
+        "district": "Ilam",
+        "constituency": "2",
+        "constituency_name": "1",
+        "representative": "Shamsher Rai",
+        "gender": "male",
+        "age": 51,
+        "party": "Nepali Congress",
+        "id": 12780,
+        "elected": true
+    },
+    {
+        "district": "Jhapa",
+        "constituency": "1",
+        "constituency_name": "1",
+        "representative": "Gopal Tamang",
+        "gender": "male",
+        "age": 50,
+        "party": "Nepali Congress",
+        "id": 23045,
+        "elected": true
+    },
+    {
+        "district": "Jhapa",
+        "constituency": "1",
+        "constituency_name": "5",
+        "representative": "Hikmat K. Karkee",
+        "gender": "male",
+        "age": 58,
+        "party": "Nepali Congress (EC)",
+        "id": 22530,
+        "elected": true
+    },
+    {
+        "district": "Jhapa",
+        "constituency": "1",
+        "constituency_name": "3",
+        "representative": "Bhim Prasad Rajwanshi",
+        "gender": "male",
+        "age": 57,
+        "party": "Nepali Congress",
+        "id": 20770,
+        "elected": true
+    }
+]
+```
