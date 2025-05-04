@@ -11,8 +11,8 @@ public:
 int Student::count = 10;
 
 int main() {
-  Student S1;
-  std::cout << S1.name << std::endl;
-  std::cout << Student::count << std::endl;
+  for (int i = 0; i < 10; i++) {
+    std::cout << i << std::endl;
+  }
   return 0;
 }

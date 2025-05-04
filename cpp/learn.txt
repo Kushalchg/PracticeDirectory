@@ -1,0 +1,140 @@
+C programming: C Tokens, Operators, Input/output, Control Statements, Looping,
+Functions, Array, and String manipulations, Pointers, Structure and Data Files
+
+C++ Programming: Function Overloading, Default Argument, concept of Class and
+object, Constructor and Destructor, static Data Member and static Function, Friend
+Function and Friend Classes, Operator overloading (unary, binary), Inheritance (single,
+multiple, multilevel, hybrid, multipath), Pure Virtual Function, and concept of Templates
+and Exception Handling
+
+================================================================================================
+
+C Tokens:
+=========
+
+ -- C tokens are smallest individual unit in c , that the compiler can
+ understand.
+  
+-- There are several type of ctokens in c:
+
+1. Keywords :: these are the reserved word in c programming , we can't use
+these word to define variable, funciton and in argurment.
+(int,float,void,while,return, if ,else)
+
+2. operators:: symbol of arthmetic (+,=,-,>,<,/,&&,||,!,!=,==) and many more.
+
+3. separators(punctuators):: character used in separets parts of program like 
+(),{},[],;,,,;.
+4. setings, number constante, floating point constant.
+
+5. identifier:: Name used for variable, functions,array etc.
+ 
+Operators:
+==========
+
+Operators are
+the symbols used to do operations between operands.
+1. Arthmetic operaror:(+.-,/,*,%)
+2. Logical operators (&&,||,!)
+3. Relational (comparision) Operators:(!=,==,<,>,<=,>=)
+4. Assignment Operator: (=,+=,-=,/=,*=)
+5. Increment Decrement Operator,(++,--)
+6. Bitwise Operator: (&,|,<<(left shift),>>(right shift),^(xor),~(not))
+7. Conditional Operator (a>b?c:d)
+
+Input/Output:
+==============
+  char name[20];
+  int a;
+  printf("enter your name\n");
+  scanf("%s", name);
+
+  printf("enter your age\n");
+  scanf("%d", &a);
+
+  printf("Your name is::%s\n", name);
+  printf("Your age is::%d\n", a);
+
+Control Statements:
+====================
+
+  // do while loop
+  /*
+  int i = 10;
+  do {
+    printf("*");
+    i++;
+    printf("\n");
+  } while (i < 5);
+  */
+
+  // while loop
+  /*
+  while (i < 5) {
+    printf("*");
+    i++;
+    printf("\n");
+  }
+  */
+
+  // for loop
+  /*
+  for (int i = 0; i < 10; i++) {
+    printf("*");
+    printf("\n");
+  }
+  */
+
+// if else statemant
+  int i = 10;
+  if (i < 10) {
+    printf("value is less than 10");
+  } else if (i == 10) {
+    printf("value is equal 10");
+  } else {
+    printf("value greater than 10");
+  }
+
+//switch statement:
+
+int i=1
+switch(){
+case 1:
+  printf("value is 1");
+  break;
+case 3:
+  printf("the value is 3");
+  break;
+default:
+  printf("the value is unknown");
+  break;
+}
+
+//conditional statement:
+
+  i == 2 ? (printf("vv")) : (printf("a"));
+
+funcitons:
+========================
+
+int DisplayValue() {
+  int a = 10;
+  printf("the value is %d", a);
+  return a + 10;
+}
+
+int main() {
+  int c = DisplayValue();
+  printf("the value is %d", c);
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+

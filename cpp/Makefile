@@ -1,23 +1,40 @@
-# File: Makefile
+# Makefile
 
-# Variables
+# C++ Variables
 CXX = g++
 CXXFLAGS = -Wall -g
-TARGET = main
-SRC = main.cpp
+CPPTARGET = main
+CPPSRC = main.cpp
 
-# Default target
-all: build run
+# C Variables
+CC = gcc
+CFLAGS = -Wall -g
+CTARGET = cmain
+CSRC = main.c
 
-# Build target
-build:
-	@$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+# Default targets
+cpp: cppbuild cpprun
+c: cbuild crun
 
-# Run target
-run:
-	@./$(TARGET)
+# C++ build and run
+cppbuild:
+	@$(CXX) $(CXXFLAGS) -o $(CPPTARGET) $(CPPSRC)
 
-# Clean target
-clean:
-	rm -f $(TARGET)
+cpprun:
+	@./$(CPPTARGET)
 
+cppclean:
+	rm -f $(CPPTARGET)
+
+# C build and run
+cbuild:
+	@$(CC) $(CFLAGS) -o $(CTARGET) $(CSRC)
+
+crun:
+	@./$(CTARGET)
+
+cclean:
+	rm -f $(CTARGET)
+
+# Clean all
+clean: cppclean cclean
