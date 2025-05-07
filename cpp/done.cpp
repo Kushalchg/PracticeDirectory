@@ -127,3 +127,82 @@ int main() {
   std::cout << Principal::count << std::endl;
   return 0;
 }
+
+/*==============================================================================*/
+// PURE VIRTUAL FUNCTIONS
+
+/*
+ * pure virtual funcitons are that type of function which are defined that has
+ * no implementation on base class but overridden in derived class;
+ * syntax::
+ *
+ * virtual void CalculateArea(parameter) const=0 //const=0 make it virtual
+ *
+ * */
+class Shape {
+public:
+  virtual double CalculateArea() const = 0;
+
+  // destructure for perfect cleanup
+  ~Shape() {}
+};
+
+class Circle : public Shape {
+private:
+  float radius;
+
+public:
+  // constructor
+  /*Circle(float r) : radius(r) {};*/
+  Circle(float r) { radius = r; }
+  // override the pure virtual functions
+  virtual double CalculateArea() const override {
+    return 3.14 * radius * radius;
+  }
+};
+
+class Ractangle : public Shape {
+private:
+  int height;
+  int width;
+
+public:
+  // constructor
+  /*Ractangle(int h,int w):height(h),width(w){};*/
+  Ractangle(int h, int w) {
+    height = h;
+    width = w;
+  }
+
+  virtual double CalculateArea() const override { return height * width; }
+};
+
+int vir() {
+  Ractangle R(20, 11);
+  Circle c(5);
+
+  Shape *shapes[] = {&c, &R};
+  for (const Shape *shape : shapes) {
+    std::cout << "Area: " << shape->CalculateArea() << std::endl;
+  }
+  return 0;
+};
+/*=============================================================================*/
+/*ERROR HANDLING*/
+
+void ErrorHandling() {
+  try {
+    int val = 100;
+    int z = 0;
+    int res = val / z;
+    cout << "the value is::" << res << endl;
+
+  } catch (...) {
+    cerr << "unknown error" << endl;
+  }
+}
+
+int ShowError() {
+  ErrorHandling();
+  return 0;
+}

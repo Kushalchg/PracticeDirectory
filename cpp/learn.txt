@@ -9,7 +9,7 @@ and Exception Handling
 
 ================================================================================================
 
-C Tokens:
+C TOKENS:
 =========
 
  -- C tokens are smallest individual unit in c , that the compiler can
@@ -29,7 +29,7 @@ these word to define variable, funciton and in argurment.
 
 5. identifier:: Name used for variable, functions,array etc.
  
-Operators:
+OPERATORS:
 ==========
 
 Operators are
@@ -42,7 +42,7 @@ the symbols used to do operations between operands.
 6. Bitwise Operator: (&,|,<<(left shift),>>(right shift),^(xor),~(not))
 7. Conditional Operator (a>b?c:d)
 
-Input/Output:
+INPUT/OUTPUT:
 ==============
   char name[20];
   int a;
@@ -55,7 +55,7 @@ Input/Output:
   printf("Your name is::%s\n", name);
   printf("Your age is::%d\n", a);
 
-Control Statements:
+CONTROL STATEMENTS:
 ====================
 
   // do while loop
@@ -114,7 +114,7 @@ default:
 
   i == 2 ? (printf("vv")) : (printf("a"));
 
-funcitons:
+FUNCITONS:
 ========================
 
 int DisplayValue() {
@@ -129,9 +129,174 @@ int main() {
   return 0;
 }
 
+STRING MANUPLAITON:
+=============
+
+  string in c are null terminator i.e there will be \0 added at the end of
+  every string and memory required is total character plus 1 byte.
+  eg.
+   for string char str[]="kushal".
+   the memory consumption will be 6 letter plus one null terminator i.e 7 byte
+
+  char str[] = "a k";
+
+  // auto sized array;
+
+  char str1[] = "Kcshal Chapagain";
+
+  // string literals
+  // string literals are immutable.
+  // stored in read only memory.
+  char *str2 = "pointer kushal";
+
+  // other string can be change as long as we are in range
+  str1[1] = 'u';
+
+  // will give the number of character
+  int length = strlen(str);
+
+  // will total character in string +1 (null terminator)
+  int l = sizeof(str) / sizeof(str[0]);
+
+  //copy string oone to another (the destination should accomodate the source
+  string)
+  strcpy(str2, str1);
+
+  // compare two string;
+  // retrun 0 if the two strig are equal and if there are not equal,
+  // it will return the first unequal character Ascii value difference
+  // for example:
+  // if str1="aa"; and str2="az";
+  // then it will return ascii(a)- ascii(z)
+  int a = strcmp(str2, str1);
+
+  // append the str2 into str1
+  strcat(str1, str2);
 
 
+STRUCTURE(STRUCT IN C)
+=================================
+//struct can be used as object and can be use as the type using typedef
 
+
+struct ME {
+  int age;
+  char name[10];
+};
+
+typedef struct {
+  int age;
+  char name[10];
+} Infotype;
+
+int main() {
+  struct ME mystruct;
+  mystruct.age = 10;
+  strcpy(mystruct.name, "kushal");
+
+  // dypedef uses
+  Infotype myInfo;
+  myInfo.age = 25;
+  strcpy(myInfo.name, "chapagain");
+
+  printf("the age is:: %d\n", mystruct.age);
+  printf("the name is:: %s\n", mystruct.name);
+
+  printf("the age is::typedef:: %d\n", myInfo.age);
+  printf("the name is::typedef:: %s\n", myInfo.name);
+  return 0;
+}
+
+POINTERS
+===================
+
+Pointer is the variable which store the memory addresses.
+
+syntax;
+
+type *variable_name
+
+now the variable_name is pointer, In this variable we only store the address of
+the variable.like:: 
+
+//this will work
+//when we initialize the pointer it will point to the random momory address so
+we can't directly update like this (*ptr=100) , when we try to do this it tries
+to overwrite the memory content with 100 which crashes;
+
+int *ptr;
+ptr=&num;
+ 
+But if we assign ptr with new number directly like this:
+*ptr=100;
+no the ptr contain the attress of the num variable so when  we assign the value
+100 directly to the pointer of ptr it will overwrite the num bariable 100;
+ 
+if we need assign the value to the pointer we can use the pointer of address i.e
+//this will work 
+*variable_name=100;
+
+-----------------------
+int main(){
+
+  int *ptr;
+  int num = 10;
+
+  ptr = &num;
+  // by assigning the ptr 100 it will overwirte the content of address of ptr
+  //(i.e num address)
+  *ptr = 100;
+
+  printf("the value of a is::%d\n", num);
+  printf("the value of ptr is::%d\n", *ptr);
+
+  return 0;
+}
+
+FILE STRUCTURE:
+=====================
+//for file open;
+
+FILE *fptr;
+fptr=fopen("file name ",mode)
+//where mode can be "w","r","a"(append),
+// w+ (read +write), r+ (read+write), a+(read+append)
+//for write int the file :
+
+// write into the file with newline
+fprintf(fptr,"content");
+
+
+// write into the file, newline is not added automatically.
+fputs("anotherline \n",fptr);
+
+fclose(fptr);
+
+
+===========================================================================
+                  DATA STRUCTURE AND ANALYSIS
+===========================================================================
+
+Time and space analysis of algorithms (Big oh, omega and theta notations). 
+Stack and queue implementation and Application, Stack and Queues as list;
+Dynamic implementation of linked list- Singly Linked list, Doubly Linked list, and Circular Linked list.
+Concept of Tree, insertion/deletions in Binary Tree, Tree traversals,
+AVL balanced trees, The Huffman algorithm, M-way search trees, B-Tree, and Red Black Tree;
+
+SORTING- internal and external sorting,
+Insertion and selection sort, Exchange sort, Merge and Redix sort, Shell sort, Heap sort, 
+
+SEARCH- Sequential search, Binary search, General search tree, Hashing;
+
+GRAPHS - types of graphs, representation of Graph, Transitive closure of graph,
+Warshall's algorithm, Graph Traversal, Topological Sorting, 
+Minimum spanning trees, Shortest-path algorithm
+
+
+TIME AND SPACE COMPLEXITY:
+===========================
+
+-- Use to analyze hte algorithm 
 
 
 
