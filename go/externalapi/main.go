@@ -1,7 +1,7 @@
 package main
 
 import (
-	"context"
+	// "context"
 	"log"
 
 	"github.com/joho/godotenv"
@@ -15,8 +15,9 @@ func init() {
 }
 
 func main() {
-	ctx := context.Background()
-	GoogleApiCall(ctx)
+	// ctx := context.Background()
+	// GoogleApiCall(ctx)
 	// MistralApiCall()
+	OpenRouter()
 
 }

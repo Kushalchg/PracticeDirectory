@@ -8,6 +8,8 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "ssh2": "^1.16.0"
+    "openai": "^4.96.2",
+    "ssh2": "^1.16.0",
+    "xlsx": "^0.18.5"
   }
 }

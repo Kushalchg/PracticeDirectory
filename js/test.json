@@ -1,0 +1,24 @@
+{
+Province:Province 1,
+District:Taplejung\",
+House of Representatives Constituency:\"House of Representatives Member Election Constituency No. 1\",
+Candidate's Name:\"Yogesh Kumar Bhattarai\",
+Gender:\"Male\",
+Age:56, 
+Political Party:\"Nepal Communist Party (UML)\",
+Votes Received:21943,
+Remarks:\"Elected\"
+}
+
+{ 
+"Province\": \"Province 1\",
+"District\": \"Taplejung\",
+"Parliamentary Constituency\": \"Parliamentary Constituency No. 1\",
+"Candidate's Name\": \"Yogesh Kumar Bhattarai\",
+"Gender\": \"Male\",
+"Age\": 56,
+"Political Party\": \"Nepal Communist Party (UML)\",
+"Votes Received\": 21943,
+"Status\": \"Elected\"\n
+}
+"{\n  \"Province\": \"Province 1\",\n  \"District\": \"Taplejung\",\n  \"House of Representatives Constituency\": \"House of Representatives Member Election Constituency No. 1\",\n  \"Candidate's Name\": \"Yogesh Kumar Bhattarai\",\n  \"Gender\": \"Male\",\n  \"Age\": 56,\n  \"Political Party\": \"Nepal Communist Party (UML)\",\n  \"Received Votes\": 21943,\n  \"Remarks\": \"Elected\"\n}"

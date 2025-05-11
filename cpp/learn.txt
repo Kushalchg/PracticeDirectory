@@ -276,12 +276,13 @@ fclose(fptr);
 ===========================================================================
                   DATA STRUCTURE AND ANALYSIS
 ===========================================================================
-
+RedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRedRed
 Time and space analysis of algorithms (Big oh, omega and theta notations). 
 Stack and queue implementation and Application, Stack and Queues as list;
 Dynamic implementation of linked list- Singly Linked list, Doubly Linked list, and Circular Linked list.
 Concept of Tree, insertion/deletions in Binary Tree, Tree traversals,
 AVL balanced trees, The Huffman algorithm, M-way search trees, B-Tree, and Red Black Tree;
+
 
 SORTING- internal and external sorting,
 Insertion and selection sort, Exchange sort, Merge and Redix sort, Shell sort, Heap sort, 
@@ -296,10 +297,210 @@ Minimum spanning trees, Shortest-path algorithm
 TIME AND SPACE COMPLEXITY:
 ===========================
 
--- Use to analyze hte algorithm 
+-- Use to analyze the time and space taken my the algorithm to solve the problem
+as the input changes.
+
+There are different type of method to measure the space and time complexity:
+1. Big OH (O):
+-- Analyze worst case scenario.
+2. Theta():
+-- Analyze the avarage case scenario.
+3. Omega():
+-- Analyze the best case scenario.
+
+
+there are severla type of complexity:
+O(1): Constatnt ,
+O(logn): logarithmic,
+O(n): Linear ,
+O(n^4): Polynomial,
+O(n^2): quadratic complexity,
+(NOTE:: all the quadratic complexity are polynomial but not vice versa)
+
+o(x^n): exponential,
+
+Here N denote the number of inputs.
+
+
+STACK AND QUEUE:
+===========================================
+-- Stack  is the data structure where the values are store by stacking one after
+another.
+--If we need to retrieve the element that we first inserted, we need to retrieve
+the last element we put into.
+
+-- Data access is done in LIFO (last in first out) manner. 
+
+Operations in Stack:
+POP -> Delete / retrieve the  the element.(always done from the top of the stack)
+PUSH-> Add /insert the element on stack. (always done from top of stack)
+ISEmpty-> Check whether the stack is empty or not.
+ISFUll-> check whether the stack is full or not?
+
+Stack Implementation in c++
+
+#include<iostream.h>
+using namespace std;
+
+class Stack{
+private:
+  int arr[6];
+  int top;
+
+public:
+  Stack{
+    top=-1;
+  }
+  void Push(value){
+    if(top>=5){
+      return ;
+    }
+    arr[++top]=value;
+    cout<<value<<"::popped";
+  }  
+
+  void Pop(){
+    if(top<0){
+      cout<<"Stack is empty"<<endl;;
+      return;
+    }
+    int val =arr[top--];
+    cout<<val<<"::popped";
+  }  
+}
 
 
 
 
 
+EMBEDDED SYSTEM::
+===============================================================================================
+Embedded Systems overview, Classification of Embedded Systems. Custom Single-
+Purpose Processor Design, Optimizing Custom Single-Purpose Processors, Development
+Environment, Application-Specific Instruction-Set Processors
+Real-Time Operating and Control system, Open-loop and Close-Loop control System
+overview, Control System and PID Controllers, Software coding of a PID Controller, PID
+Tuning, VHDL Overview, Overflow and data representation using VHDL, Design of
+combinational and sequential logic using VHDL
+
+=============================================================================================
+
+
+
+
+ROUGH::
+==============
+Embedded system are the system that are designed and build with specific purpose
+with the specific componsnts.
+componnets of embedded system:
+Hardware: microcontroller, memory ,network devices, wires etc.
+software: os, Drivers, and some applicaiton , Different Iot devices are the
+perfect example of embedded system.
+
+APPLICAITON:
+
+Home appliances,(refrigenerator,smart washing machine,cctv camera,)
+medical:(Different medical equipment)
+sports:(different tracking equipment)
+automotive:(engine control uint)
+aerospace:
+industrial:robotiics
+
+CLASSIFICATION OF EMBEDDED SYSTEM:
+
+1) Small scale embedded system;
+2) Large Scale embedded system;
+3) Standalone embedded system;
+4) Networked ebedded system;
+5) Hard-real time embedded system;
+6) Soft-real time embedded system;
+
+
+
+
+
+======================================================================================================
+Emerging Technology
+===============================================================================================
+Introduction to Cloud Computing: Overview of cloud computing concepts and
+terminologies, Cloud Deployment Models, and Cloud Service Models
+Introduction to Big Data: Overview of big data concepts, characteristics, and sources,
+Big Data Applications and Use Cases
+Introduction to IoT: Overview of IoT concepts, terminologies, and applications, IoT in
+different domains: healthcare, smart cities, agriculture; Ethical and Societal Implications
+of IoT (Machine Learning and Recommendation System)
+
+=--------------------------------------------
+
+
+Cloud service models:(Iaas,Paas,Saas)
+
+Infrastructure as a service:
+
+CLOUD provider MANAGED:
+Networking,
+Storage,
+servers,
+Virtualization
+
+USER MANAGED:
+
+Operating system,
+middleware,
+runtime,
+data,
+applications
+
+(cloud platform, azure, google cloud platform virtual maching , ec2 form amazon)
+
+============================
+Paas(Platform as a service):
+
+Cloud Provider Managed:
+
+Network,
+Storage,
+server,
+virtualization,
+os,
+Middleware,
+runtime,
+
+User Managed:
+data,
+application
+
+
+Deployment and hosting platform platform, google app engine,Horuku, Cloudflare etc,
+(apis services and other stuff)
+
+=========================
+Saas(Software as a service):
+
+all the department are manaegd by the service proveider,
+
+Network,
+Storage,
+server,
+virtualizatio,
+os,
+runtime,
+middleware,
+data,
+application,
+
+(youtube, email,facebook,chatgpt)
+
+
+=======================
+CLOUD DEPLOYMENT MODELS:
+
+
+Private,
+Public,
+Community
+Hybrid
+
+
+============================
 
